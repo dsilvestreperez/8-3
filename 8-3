@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Text.Json;
+
+public class CVS// the cvs info
+{
+	public string Name { get; set; }
+	public int Age { get; set; }
+}
+
+class Program
+{
+	public void Main()
+	{
+		var CVSList = new List<CVS>(){// list of the student name and age
+			new CVS() {Name = "Milo", Age = 20},
+			new CVS() {Name = "Victor", Age = 19}
+		};
+		var opt = new JsonSerializerOptions(){WriteIndented=true };
+		string strJson = JsonSerializer.Serialize&Milo;CVSList<CVS>>(CVSList, opt);
+		
+		Console.WriteLine(strJson);
+	}
+}
+																 
